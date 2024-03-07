@@ -1,0 +1,95 @@
+@use './../../helpers/functions' as *;
+
+.WishList {
+    margin: auto !important;
+
+    .Empty {
+        height: 800px;
+        background-color: whitesmoke;
+        margin-top: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        h1 {
+            color: $BaseColor;
+            font-weight: lighter;
+        }
+    }
+
+    .card {
+        border: none;
+        @include Animtation(0.5s, linear, all);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            button {
+                -webkit-transform: translateY(-30%);
+                -ms-transform: translateY(-30%);
+                transform: translateY(-30%);
+                opacity: 1;
+            }
+
+            .Remove {
+                opacity: 1;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0 0 12px 3px $BaseColor;
+            box-shadow: 0 0 12px 3px $BaseColor;
+        }
+
+        img {
+            height: 300px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+
+        .Star {
+            color: #ffc906;
+        }
+
+        h1 {
+            color: $BaseColor;
+        }
+
+        .price {
+            font-weight: bolder;
+        }
+    }
+
+    button {
+        background-color: $BaseColor;
+        border-color: $BaseColor;
+        @include Animtation(0.5s, ease, all);
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+
+    .Remove {
+        font-size: 20px;
+        color: $BaseColor;
+        opacity: 0;
+        @include Animtation(0.5s, linear, all);
+    }
+}

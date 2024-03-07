@@ -1,0 +1,94 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@use './../../helpers/functions' as *;
+
+.Home {
+    .card {
+        border: none;
+        @include Animtation(0.5s, linear, all);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            button {
+                -webkit-transform: translateY(-30%);
+                -ms-transform: translateY(-30%);
+                transform: translateY(-30%);
+                opacity: 1;
+            }
+
+            .WishAdd {
+                right: 5px;
+                opacity: 1;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0 0 12px 3px $BaseColor;
+            box-shadow: 0 0 12px 3px $BaseColor;
+        }
+
+        img {
+            height: 300px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+
+        svg {
+            color: #ffc906;
+        }
+
+        h1 {
+            color: $BaseColor;
+        }
+
+        .price {
+            font-weight: bolder;
+        }
+    }
+
+    button {
+        background-color: $BaseColor;
+        border-color: $BaseColor;
+        @include Animtation(0.5s, ease, all);
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        opacity: 0;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+
+    .WishAdd {
+        position: absolute;
+        right: -50%;
+        top: 40%;
+        width: 40px;
+        height: 40px;
+        border: solid transparent 1px;
+        padding: 5px;
+        color: white !important;
+        font-size: 20px;
+        @include Animtation(0.5s, ease, all);
+        opacity: 0;
+        background-color: $BaseColor;
+        border-radius: 10px;
+
+        &.Added {
+            color: red !important;
+        }
+    }
+}

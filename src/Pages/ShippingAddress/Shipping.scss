@@ -1,0 +1,28 @@
+@use './../../helpers/functions' as *;
+
+.Shipping {
+
+    span {
+        display: block;
+        width: 100%;
+    }
+
+    label {
+        margin-top: 20px;
+    }
+
+    input {
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        width: 100%;
+
+        &:focus {
+            border-color: $BaseColor;
+        }
+    }
+
+    .btn {
+        margin-top: 40px;
+        @include FormButton();
+    }
+}

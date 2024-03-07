@@ -1,0 +1,38 @@
+@use './../../helpers/functions' as *;
+
+.Register {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-top: 30px;
+
+    span {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    label {
+        margin-top: 20px;
+    }
+
+    input {
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+
+        &:focus {
+            border-color: $BaseColor;
+        }
+    }
+
+    .btn {
+        margin-top: 40px;
+        @include FormButton();
+    }
+}

@@ -1,0 +1,49 @@
+@use './../../helpers/functions' as *;
+
+.Orders {
+    .Main_Title {
+        color: $BaseColor;
+        font-weight: lighter;
+    }
+
+    .Empty {
+        height: 800px;
+        background-color: whitesmoke;
+        margin-top: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        h1 {
+            color: $BaseColor;
+            font-weight: lighter;
+        }
+    }
+
+    .Order {
+        background-color: whitesmoke;
+    }
+
+    .card {
+        border: none;
+        background-color: whitesmoke;
+
+        .card-body {
+            h1 {
+                color: $BaseColor;
+            }
+        }
+
+        .Price {
+            font-weight: bold;
+        }
+    }
+
+
+}

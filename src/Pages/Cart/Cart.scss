@@ -1,0 +1,147 @@
+@use './../../helpers/functions' as *;
+
+.Cart {
+    background-color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .CheckOut {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        a {
+            background-color: $BaseColor;
+            color: white;
+            font-size: 30px;
+
+            &:hover {
+                background-color: rgba($BaseColor, 0.8);
+                color: white;
+            }
+        }
+
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: bold;
+        color: $BaseColor;
+    }
+
+    .CartLoader {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .CartDesc {
+        height: 200px;
+        border-bottom: 1px solid rgba(black, 0.2);
+        padding-bottom: 15px;
+
+        @include Breakpoints(mobile) {
+            height: -webkit-max-content;
+            height: -moz-max-content;
+            height: max-content;
+        }
+
+        .CartDesc_pt1 {
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            @include Breakpoints(small) {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            @include Breakpoints(mobile) {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            img {
+                height: 100%;
+
+                @include Breakpoints(mobile) {
+                    height: 250px;
+                    width: 100%;
+                    -o-object-fit: contain;
+                    object-fit: contain;
+                }
+            }
+
+            .CartDesc_pt1_Details {
+                p {
+                    margin: 0;
+                    font-size: 20px;
+                }
+
+                p:first-of-type {
+                    font-weight: bold;
+                }
+
+                p:nth-of-type(3) {
+                    cursor: pointer;
+
+                    svg {
+                        color: $BaseColor;
+                    }
+                }
+            }
+        }
+
+        .CartDesc_pt2 {
+            @include Breakpoints(mobile) {
+                width: 100%;
+            }
+
+            p {
+                margin: 0;
+                font-size: 30px;
+            }
+
+            span {
+                height: 42px;
+                width: 100px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                border: solid 0.1px;
+                border-radius: 5px;
+                margin: 0 10px;
+                font-size: 30px;
+                cursor: pointer;
+                @include Animtation(0.5s, linear, all);
+
+                &:hover {
+                    color: white;
+                    background-color: $BaseColor;
+                }
+            }
+
+            svg {
+                color: $BaseColor;
+            }
+        }
+    }
+}

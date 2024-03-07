@@ -1,0 +1,12 @@
+@use './../../helpers/functions' as *;
+
+.Brands {
+    @include Breakpoints(mobile) {
+        margin-left: 0 !important;
+    }
+
+    h1 {
+        color: $BaseColor;
+        font-weight: lighter;
+    }
+}

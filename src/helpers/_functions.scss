@@ -1,0 +1,43 @@
+@mixin Breakpoints($point) {
+    @if $point ==mobile {
+        @media (max-width:767px) {
+            @content;
+        }
+    }
+
+    @else if $point ==small {
+        @media (min-width:768px) and (max-width:991px) {
+            @content;
+        }
+    }
+
+    @else if $point ==medium {
+        @media (min-width:992px) and (max-width:1199px) {
+            @content;
+        }
+    }
+
+    @else if $point ==large {
+        @media (min-width:1200px) {
+            @content;
+        }
+    }
+}
+
+@mixin Animtation($Time, $Type, $Prop) {
+    transition: $Time $Type $Prop;
+}
+
+@mixin FormButton() {
+    background-color: $BaseColor;
+    color: white;
+    padding: 5px 30px;
+    font-size: 25px;
+
+    &:hover {
+        color: white;
+        background-color: rgba($BaseColor, 0.9);
+    }
+}
+
+$BaseColor: #51b93e;

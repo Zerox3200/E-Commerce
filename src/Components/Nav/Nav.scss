@@ -1,0 +1,37 @@
+@use './../../helpers/functions' as *;
+
+nav {
+    z-index: 5;
+    width: 100%;
+
+    &.Fixed {
+        position: fixed !important;
+        top: 0;
+    }
+
+    .navbar-nav {
+        position: relative;
+
+        .CartNumber {
+            background-color: $BaseColor;
+            color: white;
+            position: absolute;
+            top: 1px;
+            left: 28px;
+            border-radius: 50%;
+            width: 23px;
+            height: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include Breakpoints(small) {
+                left: 21px;
+            }
+
+            @include Breakpoints(mobile) {
+                left: 21px;
+            }
+        }
+    }
+}
